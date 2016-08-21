@@ -3,15 +3,16 @@ const webpack = require('webpack');
 module.exports = {
   context: __dirname,
   entry: [
-    './src/main.js',
+    './src/js/main.js',
   ],
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/dist/js',
+    publicPath: 'js',
     filename: 'app.js'
   },
   module: {
     loaders: [
-      { test: /\.html$/, loader: 'file-loader?name=[name].[ext]'},
+      { test: /\.html$/, loader: 'file-loader?name=../[name].[ext]'},
 
       {
         test: /\.jsx?$/,
@@ -24,11 +25,11 @@ module.exports = {
       
     ]
   },
-  // plugins: [
-  //   new webpack.optimize.UglifyJsPlugin ({
-  //     compress: {},
-  //     output: {}
-  //   })
-  // ]
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin ({
+      compress: {},
+      output: {}
+    })
+  ]
 
 };
