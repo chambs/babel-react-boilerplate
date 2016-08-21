@@ -1,12 +1,11 @@
 {
-  "name": "babel-react-boilerplate",
+  "name": "cl_catalogue",
   "version": "1.0.0",
-  "description": "A BabelJS + React + Webpack Boilerplate",
+  "description": "castLabs video catalogue",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack && echo \"Build done, content available at ./build folder\"",
-    "wp": "webpack",
+    "build": "webpack && echo \"Build done, content available at ./dist folder\"",
     "start": "webpack-dev-server --content-base ./dist"
   },
   "repository": {
@@ -31,7 +30,10 @@
     "babel-preset-es2015": "^6.13.2",
     "bootstrap-loader": "^1.2.0-beta.1",
     "bootstrap-webpack": "0.0.5",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
